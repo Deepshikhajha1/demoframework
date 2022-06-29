@@ -13,6 +13,7 @@
           <include name="beforeClass"/>
           <include name="Smoke03"/>
           <include name="Smoke02"/>
+          <include name="Smoke01"/>
         </methods>
       </class> <!-- test.functional.sanity.ExtentReportsClass -->
     </classes>

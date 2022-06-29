@@ -82,15 +82,7 @@ public class BaseScript {
 	 * 
 	 * }
 	 */
-	/*
-	 * public static String getScreenhot(String screenshotName) throws Exception {
-	 * String fileWithPath = PropertyReader.getInstance().getProperty("imagepath");
-	 * String datetimesuffix = UtilityMethods.currentdatetime()+".png";
-	 * TakesScreenshot ts = (TakesScreenshot) wd; File SrcFile =
-	 * ts.getScreenshotAs(OutputType.FILE); File DestFile = new File(fileWithPath +
-	 * datetimesuffix); FileUtils.copyFile(SrcFile, DestFile); String finalname =
-	 * fileWithPath + datetimesuffix; return finalname; }
-	 */
+	
 	
 	public static String getScreenhot() throws Exception {
 		String datetimesuffix = UtilityMethods.currentdatetime();
@@ -104,7 +96,7 @@ public class BaseScript {
 
 
 	public static void waitmethod(String xpathexpression) {
-		WebDriverWait wait = new WebDriverWait(wd, 10);
+		WebDriverWait wait = new WebDriverWait(wd, 15);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathexpression)));
 		
 	}

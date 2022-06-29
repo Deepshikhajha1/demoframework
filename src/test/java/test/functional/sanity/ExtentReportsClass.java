@@ -34,9 +34,6 @@ import script.BaseScript;
 import util.PropertyReader;
 import util.UtilityMethods;
 
-//It is possible to attach screenshots. To add a screen-shot, simply call addScreenCapture. 
-//This method returns the HTML with  tag which can be used anywhere in the log details.
-
 public class ExtentReportsClass {
 	ExtentReports extent;
 	ExtentTest logger;
@@ -87,6 +84,7 @@ public class ExtentReportsClass {
 		logger = extent.startTest("Smoke04");
 		ac.addquantitytocart("3");
 		ac.addsizetocart("M");
+		ac.addcolortocart("Blue");
 		ac.addtocartbutton();
 
 	}

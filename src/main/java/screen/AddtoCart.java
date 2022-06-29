@@ -25,6 +25,12 @@ public class AddtoCart {
 		selectlist.selectByVisibleText(visibletextvalue);
 		//BaseScript.screenshotmethod();
 	}
+	
+	public void addcolortocart(String color){
+
+		WebElement Addtocart_color = BaseScript.getElement("//ul[@id='color_to_pick_list']//child::li//a[@title='"+color+"']");
+		Addtocart_color.click();
+	}
 
 	public void addtocartbutton() throws IOException {
 		WebElement Addtocart_addtocartbutton = BaseScript.getElement("//button[@name='Submit']");
