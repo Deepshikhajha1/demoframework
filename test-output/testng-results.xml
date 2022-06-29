@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-06-28T19:18:15 IST" name="Default suite" finished-at="2022-06-28T19:18:56 IST" duration-ms="41140">
+    <groups>
+    </groups>
+    <test started-at="2022-06-28T19:18:15 IST" name="Default test" finished-at="2022-06-28T19:18:56 IST" duration-ms="41140">
+      <class name="test.functional.sanity.ExtentReportsClass">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7]" started-at="2022-06-28T19:18:15 IST" name="startReport" finished-at="2022-06-28T19:18:15 IST" duration-ms="128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7]" started-at="2022-06-28T19:18:15 IST" name="beforeClass" finished-at="2022-06-28T19:18:15 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="Smoke01()[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7]" started-at="2022-06-28T19:18:15 IST" name="Smoke01" finished-at="2022-06-28T19:18:27 IST" duration-ms="11872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Smoke01 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7]" started-at="2022-06-28T19:18:27 IST" name="getResult" finished-at="2022-06-28T19:18:28 IST" duration-ms="468" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Smoke01 status=SUCCESS method=ExtentReportsClass.Smoke01()[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="Smoke02()[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7]" started-at="2022-06-28T19:18:28 IST" name="Smoke02" finished-at="2022-06-28T19:18:32 IST" duration-ms="3991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Smoke02 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7]" started-at="2022-06-28T19:18:32 IST" name="getResult" finished-at="2022-06-28T19:18:32 IST" duration-ms="178" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Smoke02 status=SUCCESS method=ExtentReportsClass.Smoke02()[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="Smoke03()[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7]" started-at="2022-06-28T19:18:32 IST" name="Smoke03" finished-at="2022-06-28T19:18:47 IST" duration-ms="14909" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Smoke03 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7]" started-at="2022-06-28T19:18:47 IST" name="getResult" finished-at="2022-06-28T19:18:47 IST" duration-ms="176" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Smoke03 status=SUCCESS method=ExtentReportsClass.Smoke03()[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="Smoke04()[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7]" started-at="2022-06-28T19:18:47 IST" name="Smoke04" finished-at="2022-06-28T19:18:51 IST" duration-ms="3959" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Smoke04 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7]" started-at="2022-06-28T19:18:51 IST" name="getResult" finished-at="2022-06-28T19:18:51 IST" duration-ms="150" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Smoke04 status=SUCCESS method=ExtentReportsClass.Smoke04()[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterclass()[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7]" started-at="2022-06-28T19:18:51 IST" name="afterclass" finished-at="2022-06-28T19:18:56 IST" duration-ms="5097" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterclass -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:test.functional.sanity.ExtentReportsClass@3315d2d7]" started-at="2022-06-28T19:18:56 IST" name="endReport" finished-at="2022-06-28T19:18:56 IST" duration-ms="182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- test.functional.sanity.ExtentReportsClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
