@@ -17,6 +17,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import util.*;
 
 public class BaseScript {
@@ -27,11 +28,14 @@ public class BaseScript {
 	File file = new File("shoppingsiteimage.jpeg");
 
 	private static WebDriver getFirefoxDriver() {
+		WebDriverManager.firefoxdriver().setup();
 		wd = new FirefoxDriver();
 		return wd;
 	}
 
 	private static WebDriver getChromeDriver() {
+		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().version("2.26").setup();
 		wd = new ChromeDriver();
 		return wd;
 	}
@@ -39,7 +43,8 @@ public class BaseScript {
 	public static WebDriver getDriverObject() {
 		if (PropertyReader.getInstance().getProperty("browser").equalsIgnoreCase(CHROME)) {
 			System.out.println("Initiating Chrome Driver");
-			System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\drivers\\chromedriver.exe");
+			
+			//System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\drivers\\chromedriver.exe");
 			getChromeDriver();
 		}
 		if (PropertyReader.getInstance().getProperty("browser").equalsIgnoreCase(FIREFOX)) {
@@ -72,33 +77,20 @@ public class BaseScript {
 		move.moveToElement(Element).build().perform();
 	}
 
-	/*
-	 * public static void screenshotmethod() throws IOException { String
-	 * fileWithPath = PropertyReader.getInstance().getProperty("imagepath"); String
-	 * datetimesuffix = "\\"+UtilityMethods.currentdatetime()+".png";
-	 * TakesScreenshot ts = (TakesScreenshot) wd; File SrcFile =
-	 * ts.getScreenshotAs(OutputType.FILE); File DestFile = new File(fileWithPath +
-	 * datetimesuffix); FileUtils.copyFile(SrcFile, DestFile);
-	 * 
-	 * }
-	 */
-	
-	
 	public static String getScreenhot() throws Exception {
 		String datetimesuffix = UtilityMethods.currentdatetime();
 		TakesScreenshot ts = (TakesScreenshot) wd;
-		File source = ts.getScreenshotAs(OutputType.FILE);                
-		String destination = System.getProperty("user.dir") + "/Screenshots/"+datetimesuffix+".png";
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String destination = System.getProperty("user.dir") + "/Screenshots/" + datetimesuffix + ".png";
 		File finalDestination = new File(destination);
 		FileUtils.copyFile(source, finalDestination);
 		return destination;
-		}
-
+	}
 
 	public static void waitmethod(String xpathexpression) {
 		WebDriverWait wait = new WebDriverWait(wd, 15);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathexpression)));
-		
+
 	}
 
 }

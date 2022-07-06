@@ -37,7 +37,7 @@ import util.UtilityMethods;
 public class ExtentReportsClass {
 	ExtentReports extent;
 	ExtentTest logger;
-	//WebDriver driver;
+	// WebDriver driver;
 //	private Logger logger = Logger.getLogger(ExtentReportsClass.class);
 	BaseScreen bs = new BaseScreen();
 	HomePage hp = new HomePage();
@@ -47,6 +47,7 @@ public class ExtentReportsClass {
 	@BeforeClass
 	public void beforeClass() {
 //		logger.info("Started executing Smoke test");
+		System.out.println("inside beforeclass");
 	}
 
 	@BeforeTest
@@ -79,30 +80,28 @@ public class ExtentReportsClass {
 		sp.searchresultview();
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void Smoke04() throws IOException {
 		logger = extent.startTest("Smoke04");
 		ac.addquantitytocart("3");
 		ac.addsizetocart("M");
 		ac.addcolortocart("Blue");
 		ac.addtocartbutton();
-
+		//throw new SkipException("This Testcase is Skipped Deliberately");
 	}
-
-	
 
 	@AfterMethod
 	public void getResult(ITestResult result) throws Exception {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getName());
-			//logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getThrowable());
-			
+			// logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getThrowable());
+
 			String screenshotPath = BaseScript.getScreenhot();
 			logger.log(LogStatus.FAIL, logger.addScreenCapture(screenshotPath));
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			logger.log(LogStatus.PASS, "Test Case passed is " + result.getName());
-			//logger.log(LogStatus.PASS, "Test Case passed is " + result.getThrowable());
-			
+			// logger.log(LogStatus.PASS, "Test Case passed is " + result.getThrowable());
+
 			String screenshotPath = BaseScript.getScreenhot();
 			// To add it in the extent report
 			logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
